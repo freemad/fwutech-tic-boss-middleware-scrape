@@ -1,0 +1,102 @@
+package com.fwutech.oss.middleware.adapters.ciscodata.global;
+
+public interface CiscoDataApiRoute {
+
+    String WEBACS = "/webacs";
+    String API = "/api";
+    String V1 = "/v1";
+    String V2 = "/v2";
+    String V3 = "/v3";
+    String V4 = "/v4";
+    String DATA = "/data";
+    String JSON_SUFFIX = ".json";
+    String OP = "/op";
+
+    String API_V1 = WEBACS + API + V1;
+    String API_V2 = WEBACS + API + V2;
+    String API_V3 = WEBACS + API + V3;
+    String API_V4 = WEBACS + API + V4;
+
+    String inventoryDEVICES = "/Devices";
+    String INVENTORY_DETAILS = "/InventoryDetails";
+    String CLI_TEMPLATE_CONFIG = "/cliTemplateConfiguration";
+    String DEVICE_TYPES = "/deviceTypes";
+    String CLIENT_DETAILS = "/ClientDetails";
+    String CLIENT_SESSIONS = "/ClientSessions";
+    String CLIENTS = "/Clients";
+    String GROUP_SPECIFICATION = "/GroupSpecification";
+    String STATISTICS_SERVICE = "/statisticsService";
+    String INTERFACES = "/interfaces";
+    String METRICS = "/metrics";
+    String CLIENT_COUNTS = "/ClientCounts";
+    String ALARMS = "/Alarms";
+    String EVENTS = "/Events";
+    String CLIENT_TRAFFICS = "/ClientTraffics";
+    String GROUPS = "/groups";
+    String SITES = "/sites";
+    String ALARM_SUMMARY = "/alarmSummary";
+    String OUTDISCARDS = "/outdiscards";
+    String OUTERRORS = "/outerrors";
+    String INDISCARDS = "/indiscards";
+    String TX = "/tx";
+    String TOPNAPPLICATION = "/topnapplication";
+    String RX = "/rx";
+    String QOSCLASSMAP = "/qosclassmap";
+    String AVAILABILITY = "/availability";
+    String TOPAPPLICATIONTRAFFICOVERTIME = "/topapplicationtrafficovertime";
+    String INERRORS = "/inerrors";
+    String QOSCLASSMAPTOPTREND = "/qosclassmaptoptrend";
+    // We have two device Groups route with difference dictation
+    String alarmDEVICE_GROUPS = "/deviceGroups";
+    String inventoryDEVICE_GROUPS = "/DeviceGroups";
+    String USER_DEFINED_GROUPS = "/userDefinedGroups";
+    String performanceDEVICES = "/devices";
+    String INTERFACE = "/interface";
+    String DETAILS = "/details";
+    String CPUUTILIZATION = "/cpuutilization";
+    String BULK_SANITIZED_CONFIG_ARCHIVES = "/BulkSanitizedConfigArchives";
+    String CPU_UTIL_SUMMARY = "/cpuUtilSummary";
+    String DEVICE = "/device";
+    String CPU_UTIL_TREND = "/cpuUtilTrend";
+    String FOLDER = "/folder";
+    String APPLICATION = "/application";
+    String TRAFFIC_ANALYSIS = "/trafficAnalysis";
+    String DISCARDS = "/discards";
+    String ERRORS = "/errors";
+    String UTIL = "/util";
+    String HISTORICAL_CLIENT_COUNTS = "/HistoricalClientCounts";
+    String INFO = "/info";
+    String DISK = "/disk";
+    String SERVICE_DOMAINS = "/ServiceDomains";
+    String VD_ASSOCIATED_DYNAMIC_GROUPS = "/VDAssociatedDynamicGroups";
+    String HEALTH_INFO = "/healthInfo";
+    String MEMORY_UTIL_TREND = "/memoryUtilTrend";
+    String AVAILABILITY_MESSAGE = "/availabilityMessage";
+    String VD_ASSOCIATED_DEVICES = "/VDAssociatedDevices";
+    String Applications = "/Applications";
+    String VERSION = "/version";
+    String DISTRIBUTIONS = "/distributions";
+    String performanceCLIENTS = "/clients";
+    String UPTIME = "/uptime";
+    String REACHABILITY_STATUS = "/reachabilityStatus";
+    String PORT_SUMMARY = "/portSummary";
+    String CLI_TEMPLATE_CONFIGURATION = "/cliTemplateConfiguration";
+    String RESOURCE_TYPES = "/resourceTypes";
+    String AVAILABILITY_SUMMARY = "/availabilitySummary";
+    String API_HEALTH_RECORDS = "/ApiHealthRecords";
+    String HISTORICAL_CLIENT_TRAFFICS = "/HistoricalClientTraffics";
+    String STATUS_SUMMARY = "/statusSummary";
+    String UTIL_SUMMARY = "/utilSummary";
+    String API_RESPONSE_TIME_SUMMARY = "/ApiResponseTimeSummary";
+
+    String JOB_SUMMARY = "/JobSummary";
+    String COUNT_BY_EAP_TYPE = "/countByEapType";
+    String COUNT_BY_SWITCH = "/countBySwitch";
+    String COUNT_BY_AUTH_TYPE = "/countByAuthType";
+    String COREDUMPS = "/coredumps";
+    String LICENSE = "/license";
+
+    String V1_0 = "/v1.0";
+    String CISCO_DATA = "/cisco-data";
+    String FUNC_CHECK = "/func-check";
+}

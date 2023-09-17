@@ -1,0 +1,59 @@
+server:
+  servlet:
+    context-path: /api
+  port: 8094
+
+spring:
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5674}
+    username: ${RABBITMQ_USERNAME:rmq}
+    password: ${RABBITMQ_PASSWORD:S5VZ3wrMeV7HPpeRmgw4ZTQhD5XJPqzY}
+    listener:
+      simple:
+        default-requeue-rejected: false
+
+logging:
+  file:
+    name: ${LOGGING_FILE_NAME_ADAPTER_NCE_DATA:logs/adapter-nce-data.log}
+  logback:
+    rollingpolicy:
+      max-file-size: 2MB
+
+fwutech:
+  oss:
+    middleware:
+      adapters:
+        soap:
+          services:
+            wsdl-name:
+              alarm-retrieval: AlarmRetrieval
+              alarm-control: AlarmControl
+              alarm-handling: AlarmHandling
+              connection-retrieval: ConnectionRetrieval
+              equipment-inventory-retrieval: EquipmentInventoryRetrieval
+              flow-domain-retrieval: FlowDomainRetrieval
+              managed-element-retrieval: ManagedElementRetrieval
+              management-domain-retrieval: ManagementDomainRetrieval
+              multiLayer-subnetwork-retrieval: MultiLayerSubnetworkRetrieval
+              operations-system-retrieval: OperationsSystemRetrieval
+              performance-management-retrieval: PerformanceManagementRetrieval
+              public-route-retrieval: PublicRouteRetrieval
+              resource-inventory-retrieval: ResourceInventoryRetrieval
+              route-policy-retrieval: RoutePolicyRetrieval
+              security-retrieval: SecurityRetrieval
+              termination-point-retrieval: TerminationPointRetrieval
+              topological-link-retrieval: TopologicalLinkRetrieval
+              topo-view-retrieval: TopoViewRetrieval
+              protocol-retrieval: ProtocolRetrieval
+
+          connect:
+            url: ${NCE_DATA_IP:http://127.0.0.1:9997}
+            schema: ${NCE_DATA_SCHEMA:http}
+            ip: ${NCE_DATA_IP:178.251.208.251}
+            port: ${NCE_DATA_PORT:9997}
+            username: ${NCE_DATA_USERNAME:oss-bss}
+            password: ${NCE_DATA_PASSWORD:Fw@123456}
+            multi-communication-pattern: ${NCE_DATA_MULTI_COMMUNICATION_PATTERN:MultipleBatchResponse}
+            simple-communication-pattern: ${NCE_DATA_SIMPLE_COMMUNICATION_PATTERN:SimpleResponse}
+            communication-style: ${NCE_DATA_COMMUNICATION_STYLE:RPC}

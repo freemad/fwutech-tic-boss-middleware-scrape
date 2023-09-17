@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  profiles.active: dev
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    guru.springframework.controllers: DEBUG
+    org.hibernate: DEBUG
+  file:
+    name: ${LOGGING_FILE_NAME:logs/dev_app.log}
+---
+spring:
+  profiles: test
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    guru.springframework.controllers: DEBUG
+    org.hibernate: DEBUG
+  file:
+    name: ${LOGGING_FILE_NAME:logs/dev_app.log}
+---
+spring:
+  profiles: prod
+logging:
+  pattern:
+    file: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    org.springframework.web: INFO
+    guru.springframework.controllers: INFO
+    org.hibernate: INFO
+  file:
+    name: ${LOGGING_FILE_NAME:logs/dev_app.log}
